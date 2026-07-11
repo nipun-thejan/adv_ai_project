@@ -49,6 +49,8 @@ python -m experiments.run_experiments
 | PaySim | ~6.3M (subsampled to 500K) | ~1.3% | [Kaggle](https://www.kaggle.com/datasets/ealaxi/paysim1) |
 | SAML-D | Synthetic AML | Very low | [Kaggle](https://www.kaggle.com/datasets/berkanoztas/synthetic-transaction-monitoring-dataset-aml) |
 
+Inside data/, create the three folders named exactly: creditcardfraud, paysim1, and synthetic-transaction-monitoring-dataset-aml. and place the csv
+
 ## Key Results
 
 After running experiments, results are saved to `results/summary_results.csv` with:
