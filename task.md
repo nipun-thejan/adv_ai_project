@@ -12,5 +12,5 @@
 - [x] Selective Classification / Rejection policy
 - [x] Evaluation metrics (ECE, Brier, AUPRC, F1, risk-coverage, acc-rejection)
 - [x] Experiment runner
-- [/] Download datasets & run experiments (installing deps)
-- [ ] Write final report
+- [x] Download datasets & run experiments (installing deps)
+- [x] Write final report

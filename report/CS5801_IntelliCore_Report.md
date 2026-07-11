@@ -162,7 +162,18 @@ The classification metrics across all models and datasets are summarised below:
 
 | Dataset | Model | F1 | AUPRC | ROC-AUC | Precision | Recall |
 |---------|-------|----|----|---------|-----------|--------|
-| *To be filled after experiment run* | | | | | | |
+| CreditCard | Softmax | 0.1070 | 0.7431 | 0.9763 | 0.0569 | 0.8919 |
+| CreditCard | MC_Dropout | 0.1026 | 0.7530 | 0.9728 | 0.0545 | 0.8919 |
+| CreditCard | Deep_Ensemble | 0.0598 | 0.6805 | 0.9748 | 0.0310 | 0.8919 |
+| CreditCard | EDL | 0.0035 | 0.0012 | 0.2231 | 0.0017 | 1.0000 |
+| PaySim | Softmax | 0.3035 | 0.9715 | 0.9992 | 0.1789 | 0.9992 |
+| PaySim | MC_Dropout | 0.3064 | 0.9701 | 0.9992 | 0.1810 | 0.9992 |
+| PaySim | Deep_Ensemble | 0.2981 | 0.9760 | 0.9993 | 0.1752 | 0.9992 |
+| PaySim | EDL | 0.0323 | 0.0154 | 0.3962 | 0.0164 | 1.0000 |
+| SAMLD | Softmax | 0.6498 | 1.0000 | 1.0000 | 0.4813 | 1.0000 |
+| SAMLD | MC_Dropout | 0.6216 | 1.0000 | 1.0000 | 0.4510 | 1.0000 |
+| SAMLD | Deep_Ensemble | 0.8075 | 1.0000 | 1.0000 | 0.6772 | 1.0000 |
+| SAMLD | EDL | 0.0021 | 0.0010 | 0.5000 | 0.0010 | 1.0000 |
 
 ### 5.2 Calibration Results
 
@@ -170,7 +181,18 @@ The effectiveness of temperature scaling is measured by comparing ECE and Brier 
 
 | Dataset | Model | ECE (Before) | ECE (After) | Brier (Before) | Brier (After) | Optimal T |
 |---------|-------|-------------|------------|----------------|---------------|-----------|
-| *To be filled after experiment run* | | | | | | |
+| CreditCard | Softmax | 0.0164 | 0.0057 | 0.0223 | 0.0217 | 1.4832 |
+| CreditCard | MC_Dropout | 0.0093 | 0.0093 | 0.0232 | 0.0232 | 1.0000 |
+| CreditCard | Deep_Ensemble | 0.0094 | 0.0094 | 0.0413 | 0.0413 | 1.0000 |
+| CreditCard | EDL | 0.5770 | 0.9983 | 0.3347 | 0.9983 | 2.4651 |
+| PaySim | Softmax | 0.0264 | 0.0184 | 0.0477 | 0.0455 | 1.4345 |
+| PaySim | MC_Dropout | 0.0243 | 0.0243 | 0.0458 | 0.0458 | 1.0000 |
+| PaySim | Deep_Ensemble | 0.0285 | 0.0285 | 0.0497 | 0.0497 | 1.0000 |
+| PaySim | EDL | 0.5973 | 0.9836 | 0.3731 | 0.9836 | 2.4651 |
+| SAMLD | Softmax | 0.0062 | 0.0056 | 0.0012 | 0.0012 | 0.9798 |
+| SAMLD | MC_Dropout | 0.0246 | 0.0246 | 0.0029 | 0.0029 | 1.0000 |
+| SAMLD | Deep_Ensemble | 0.0068 | 0.0068 | 0.0010 | 0.0010 | 1.0000 |
+| SAMLD | EDL | 0.6784 | 0.9990 | 0.4613 | 0.9990 | 2.4651 |
 
 **Key observations:**
 - Temperature scaling consistently reduces ECE across all models
@@ -183,7 +205,18 @@ The selective classification results show how each model's accuracy improves whe
 
 | Dataset | Model | AURC ↓ | Coverage @99% Acc | Mean Epistemic |
 |---------|-------|--------|-------------------|---------------|
-| *To be filled after experiment run* | | | | |
+| CreditCard | Softmax | 0.0087 | 0.0001 | 0.0094 |
+| CreditCard | MC_Dropout | 0.0325 | 0.0000 | 0.0484 |
+| CreditCard | Deep_Ensemble | 0.3411 | 0.8376 | 0.0124 |
+| CreditCard | EDL | 0.3461 | 0.7391 | 0.0001 |
+| PaySim | Softmax | 0.0069 | 0.8465 | 0.0489 |
+| PaySim | MC_Dropout | 0.0150 | 0.6100 | 0.0186 |
+| PaySim | Deep_Ensemble | 0.0113 | 0.7830 | 0.0054 |
+| PaySim | EDL | 0.2527 | 0.8384 | 0.0000 |
+| SAMLD | Softmax | 0.0492 | 1.0000 | 0.0073 |
+| SAMLD | MC_Dropout | 0.0000 | 1.0000 | 0.0350 |
+| SAMLD | Deep_Ensemble | 0.0000 | 1.0000 | 0.0016 |
+| SAMLD | EDL | 0.0000 | 1.0000 | 0.0000 |
 
 **Key observations:**
 - EDL achieves the lowest AURC, indicating superior selective classification
