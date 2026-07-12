@@ -3,6 +3,6 @@ venv/
 .env.local
 venv
 __pycache__
-data/creditcardfraud
-data/paysim1
-data/synthetic-transaction-monitoring-dataset-aml
+data/creditcardfraud/*.csv
+data/paysim1/*.csv
+data/synthetic-transaction-monitoring-dataset-aml/*.csv
